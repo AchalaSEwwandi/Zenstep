@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.ZenSteps.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/emojiCard"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:cardBackgroundColor="?attr/colorPrimary"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/moodEmojiTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="😊"
+                android:textSize="28sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/emojiCard"
+            app:layout_constraintEnd_toStartOf="@+id/actionContainer"
+            app:layout_constraintStart_toEndOf="@+id/emojiCard"
+            app:layout_constraintTop_toTopOf="@+id/emojiCard">
+
+            <TextView
+                android:id="@+id/moodNoteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Feeling great today!"
+                android:textAppearance="@style/TextAppearance.ZenSteps.TitleMedium"
+                android:textColor="?attr/colorOnSurface" />
+
+            <TextView
+                android:id="@+id/moodDateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="June 15, 2023 • 10:30 AM"
+                android:textAppearance="@style/TextAppearance.ZenSteps.BodyMedium"
+                android:textColor="@color/dark_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/actionContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/emojiCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/emojiCard">
+
+            <ImageButton
+                android:id="@+id/shareButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Share mood"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_share"
+                app:tint="@color/dark_gray" />
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Delete mood"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_delete"
+                app:tint="@color/error_red" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

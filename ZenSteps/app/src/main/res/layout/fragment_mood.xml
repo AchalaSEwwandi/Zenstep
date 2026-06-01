@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        Header Card
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/primary_blue"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mood Tracker"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="How are you feeling today?"
+                    android:textColor="@color/white"
+                    android:alpha="0.9"
+                    android:textSize="14sp" />
+
+                Mood Filter Chips
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:scrollbars="none">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/moodFilterChipGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:singleLine="true"
+                        app:singleSelection="true"
+                        app:chipSpacing="8dp">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/allMoodsChip"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="All"
+                            android:textColor="@color/primary_blue"
+                            app:chipBackgroundColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/happyChip"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😊 Happy"
+                            android:textColor="@color/primary_blue"
+                            app:chipBackgroundColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/sadChip"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😢 Sad"
+                            android:textColor="@color/primary_blue"
+                            app:chipBackgroundColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/angryChip"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😡 Angry"
+                            android:textColor="@color/primary_blue"
+                            app:chipBackgroundColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/tiredChip"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😴 Tired"
+                            android:textColor="@color/primary_blue"
+                            app:chipBackgroundColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/anxiousChip"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😰 Anxious"
+                            android:textColor="@color/primary_blue"
+                            app:chipBackgroundColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/calmChip"
+                            style="@style/Widget.Material3.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😌 Calm"
+                            android:textColor="@color/primary_blue"
+                            app:chipBackgroundColor="@color/white" />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        View Controls
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/viewToggleChipGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:singleLine="true"
+                app:singleSelection="true"
+                app:chipSpacing="8dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/listViewChip"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="📋 List" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/calendarViewChip"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📅 Calendar" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/chartButton"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chart"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_chart"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    Main Content
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/moodRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="80dp" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    Empty State
+    <LinearLayout
+        android:id="@+id/emptyStateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="32dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😊"
+                    android:textSize="80sp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="No mood entries yet"
+                    android:textAlignment="center"
+                    android:textColor="@color/primary_blue"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="Start tracking your emotions and discover patterns in your daily mood"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/logMoodButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Log Your First Mood"
+                    android:textColor="@color/white"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    app:backgroundTint="@color/primary_orange"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_mood"
+                    app:iconTint="@color/white" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    Floating Action Button
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addMoodFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:text="How are you feeling?"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/primary_red"
+        app:icon="@drawable/ic_mood"
+        app:iconTint="@color/white"
+        app:elevation="6dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ZenSteps" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/primary_orange</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorTertiary">@color/primary_yellow</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorError">@color/error_red</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorOnSurfaceVariant">@color/dark_gray</item>
+        <item name="colorOutline">@color/medium_gray</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        
+        <!-- Typography -->
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.ZenSteps.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.ZenSteps.HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.ZenSteps.HeadlineSmall</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.ZenSteps.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.ZenSteps.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.ZenSteps.TitleSmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.ZenSteps.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.ZenSteps.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.ZenSteps.BodySmall</item>
+        
+        <!-- Shapes -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.ZenSteps.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.ZenSteps.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.ZenSteps.LargeComponent</item>
+    </style>
+
+    <style name="Theme.ZenSteps" parent="Base.Theme.ZenSteps" />
+    
+    <!-- Custom Themes -->
+    <style name="Theme.ZenSteps.Red" parent="Base.Theme.ZenSteps">
+        <item name="colorPrimary">@color/primary_red</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/primary_orange</item>
+        <item name="colorOnSecondary">@color/white</item>
+    </style>
+    
+    <style name="Theme.ZenSteps.Orange" parent="Base.Theme.ZenSteps">
+        <item name="colorPrimary">@color/primary_orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/primary_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+    </style>
+    
+    <style name="Theme.ZenSteps.Yellow" parent="Base.Theme.ZenSteps">
+        <item name="colorPrimary">@color/primary_yellow</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/primary_orange</item>
+        <item name="colorOnSecondary">@color/white</item>
+    </style>
+</resources>
