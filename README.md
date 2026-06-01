@@ -1,89 +1,117 @@
-# ZenStep
+# ZenSteps 🧘
 
-**ZenStep** is a smart wellness and productivity mobile application designed to help users build positive daily routines, track personal goals, and maintain a balanced lifestyle. Developed using modern Android technologies, ZenStep provides an intuitive and user-friendly experience for individuals seeking better self-discipline, consistency, and personal growth.
+ZenSteps is a comprehensive wellness mobile application designed to help users build and maintain healthy daily habits while tracking their emotional well-being and hydration levels. Built with Kotlin for Android, it provides a calm and intuitive interface for personal growth and self-care.
+
+---
 
 ## Features
 
 ### 🔐 User Authentication
+- Secure login and registration system
+- Guest mode for quick access without an account
+- Persistent user sessions with SharedPreferences
 
-* Secure user registration and login system
-* Personalized user profiles
-* Persistent login sessions for seamless access
+### 📱 Habit Tracking
+- Create custom daily or weekly habits with names and descriptions
+- Mark habits as complete and build continuous streaks
+- Visual progress tracking with pie chart statistics
+- Quick habit management via add/edit dialog interface
 
-### 🎯 Goal & Habit Management
+### 😊 Mood Journaling
+- Daily mood logging with emoji-based selection
+- Add personal notes to each mood entry
+- View mood history in list view or calendar view
+- Mood trend visualization with line/bar charts
+- Delete individual mood entries with confirmation
 
-* Create and manage daily habits and personal goals
-* Set custom targets and reminders
-* Track completion progress and achievement rates
-* Monitor consistency through streak tracking
+### 💧 Hydration Monitoring
+- Set a personalized daily water intake goal (default: 2000ml)
+- Log hydration intake in custom amounts (ml)
+- Alarm-based reminders with configurable intervals
+- Quiet hours support — no reminders during sleep time
+- Hydration history with progress visualization via pie chart
+- Boot-completed receiver to restore alarms after device restart
 
-### 🚶 Activity Tracking
+### 🔔 Smart Notifications & Reminders
+- Exact alarm scheduling for hydration reminders
+- Notification permission handling for Android 13+
+- Wake lock support for reliable background alerts
+- Alarms automatically restored after device reboot
 
-* Record daily activities and wellness routines
-* Monitor progress through visual statistics
-* Track milestones and personal achievements
-* Stay motivated with progress indicators
+### 📊 Analytics & Insights
+- Mood trends chart for emotional pattern tracking
+- Habit completion streaks and total habit count
+- Daily progress indicator on the Dashboard
+- Hydration intake tracking against daily goal
 
-### ⏰ Smart Reminders
-
-* Customizable notifications for habits and tasks
-* Daily reminders to maintain consistency
-* Flexible scheduling based on user preferences
-
-### 📊 Progress Analytics
-
-* View detailed progress reports
-* Analyze performance trends over time
-* Monitor habit completion rates
-* Gain insights into personal productivity
-
-### 🌟 Motivation & Wellness
-
-* Encourages healthy lifestyle habits
-* Promotes self-discipline and time management
-* Supports personal development and goal achievement
+### 🏆 Achievements
+- Unlock achievements based on wellness milestones
+- Tracks habit streaks (e.g., 7-day habit streak)
+- Tracks hydration consistency and mood logging history
+- Toast notifications when achievements are unlocked
 
 ### ⚙️ Settings & Customization
-
-* Personalized application preferences
-* Notification management
-* User-friendly customization options
+- Theme selection: Default, Red, Orange, Yellow
+- Light and dark mode support
+- User logout and session management
 
 ### 🎨 User Interface
+- Material Design 3 interface
+- Bottom navigation for quick access to all sections
+- Smooth onboarding flow with 3 intro screens
+- ViewPager2-based onboarding with skip/next support
+- Responsive layouts for various screen sizes
 
-* Modern and clean design
-* Smooth navigation experience
-* Responsive layouts for different screen sizes
-* Easy-to-use dashboard and tracking screens
+---
 
 ## Technical Features
 
-* **Platform:** Android
-* **Language:** Kotlin
-* **Architecture:** MVVM
-* **Database:** Local data storage for efficient performance
-* **Notifications:** Android Notification Manager
-* **UI Design:** Material Design 3
+| Detail | Info |
+|---|---|
+| Platform | Android (API 24+) |
+| Language | Kotlin |
+| Architecture | Fragment-based with Repository pattern |
+| UI | XML Layouts + ViewBinding |
+| Navigation | Jetpack Navigation Component |
+| Data Storage | SharedPreferences (local, no internet needed) |
+| Background Tasks | WorkManager + AlarmManager (Exact Alarms) |
+| Charts | MPAndroidChart v3.1.0 |
+| Permissions | Notifications, Exact Alarms, Wake Lock, Boot Completed |
+
+---
 
 ## Getting Started
 
-1. Install the ZenStep application on your Android device.
-2. Create a new account or log in.
-3. Set up your personal goals and habits.
-4. Configure reminders and preferences.
-5. Start tracking your progress and building positive routines.
+1. **Installation** — Clone the repo and open in Android Studio
+2. **Onboarding** — Complete the 3-screen onboarding flow
+3. **Authentication** — Register an account, log in, or continue as guest
+4. **Setup** — Add your habits and set your daily hydration goal
+5. **Track** — Log your habits, moods, and water intake daily
+6. **Monitor** — View your progress from the Dashboard and analytics screens
+
+```bash
+git clone https://github.com/your-username/ZenSteps.git
+```
+
+Open the project in **Android Studio**, sync Gradle, and run on a device or emulator (API 24+).
+
+---
 
 ## Privacy & Security
 
-* User data is securely stored.
-* Personal information remains private and protected.
-* No unauthorized sharing of user data.
+- All data is stored locally on your device via SharedPreferences
+- No internet connection required for core functionality
+- User data remains private — no third-party data sharing
 
-## Mission
+---
 
-ZenStep aims to empower individuals to take small, consistent steps toward a healthier, more productive, and fulfilling life. By combining goal tracking, habit management, and progress analytics, ZenStep helps users stay focused on their personal growth journey.
+
+## Contributing
+
+This project is developed for personal wellness tracking. For suggestions or improvements, please create an issue in the repository.
+
+---
 
 ## License
 
-This project is developed for educational and personal productivity purposes.
-
+This project is for educational and personal use.
